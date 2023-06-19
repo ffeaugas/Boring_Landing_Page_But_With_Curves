@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+header_div1 {
+    
+}
+
+.header_button {
+    position: absolute;
+    top: 4%;
+    right: 7%;
+    color: hsl(322, 100%, 66%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px;
+    border-color: hsl(322, 100%, 66%);
+    border-style: solid;
+    border-width: 0.15em;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.6em;
+    height: 5%;
+    justify-content: center;
+    letter-spacing: .25px;
+    max-width: 100%;
+    padding: 1px 18px;
+    text-align: center;
+    width: auto;
+    transition: all .3s;
+}
+
+.header_button:hover {
+    background-color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
+    color: #fff;
+}
+
+.header_button:active {
+    border-color: hsl(322, 95%, 85%);
+    background-color: hsl(322, 95%, 85%);
+    box-shadow: rgba(0, 0, 0, 0.178) 0px 5px 15px 5px;
+}
+
+.header_title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
