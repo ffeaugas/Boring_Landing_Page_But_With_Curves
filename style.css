@@ -5,9 +5,10 @@
     --light-pink: hsl(321, 100%, 78%);
     --light-red: hsl(0, 100%, 63%);
     --very-dark-cyan: hsl(192, 100%, 9%);
+    --dark-cyan: #003d4d;
     --very-pale-blue: 	#f5faff;
 }
- 
+
 /* * {
     box-shadow: 0 0 0 2px rgb(109, 212, 253);
 } */
@@ -30,7 +31,7 @@ p {
 
 svg {
     display: block;
-  }
+}
 
 /*--- Header ---*/
 
@@ -56,7 +57,7 @@ header {
     padding-right: 1em;
 }
 
-.header_button, .section1 input {
+.header_button, .section1 input, .section5 input, footer .button_input {
     padding: 0.9em 2.5em;
     margin:0 0.3em 0.3em 0;
     border-radius: 3em;
@@ -107,7 +108,7 @@ header {
     color: var(--very-dark-cyan);
 }
 
-.section1 input {
+.section1 input, .section5 input, footer .button_input {
     background-color: var(--pink);
     color: white;
     font-size: 0.7em;
@@ -172,6 +173,67 @@ header {
 
 .section3 {
     background-color: white;
-    /* padding-top: 3em; */
     padding-bottom: 8em;
 }
+
+/*--- Section 5 ---*/
+
+.section5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--very-dark-cyan);
+}
+
+.section5 input {
+    margin-top: 1em;
+}
+
+/*--- Footer ---*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-cyan);
+    color: white;
+    padding: 2em 2em;
+}
+
+footer h2 {
+    font-size: 1.2em;
+}
+
+footer p {
+    color: white;
+    font-size: 0.85em;
+    margin-bottom: 1em;
+}
+
+footer .text_input {
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.8em 1em;
+    margin-bottom: 1em;
+}
+
+footer .button_input {
+    border-color: var(--pink);
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    padding: 0.9em 3em;
+    margin: 0;
+    max-width: 150px;
+    margin-left: auto;
+}
+
+.box_newsletter, .box_contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+/* footer p::before {
+    content: "";
+    background-image: "images/icon-phone.svg";
+}*/
