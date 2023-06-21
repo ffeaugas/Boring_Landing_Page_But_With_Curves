@@ -9,9 +9,9 @@
     --very-pale-blue: 	#f5faff;
 }
 
-/* * {
-    box-shadow: 0 0 0 2px rgb(109, 212, 253);
-} */
+* {
+    box-shadow: 0 0 0 1px rgb(109, 212, 253);
+}
 
 html, body {
     margin: 0;
@@ -19,14 +19,16 @@ html, body {
 
 h1, h2, h3, h4  {
     font-family: 'Poppins';
+    color: var(--very-dark-cyan);
 }
 
 p {
     font-family: 'Poppins';
-    font-size: 0.8em;
+    font-size: clamp(0.8em, 0.1rem + 3vw, 1.4rem);
     font-weight: 400;
-    margin: 0;
+    margin: 0 auto;
     color: var(--very-dark-cyan);
+    max-width: 600px;
 }
 
 svg {
@@ -89,6 +91,7 @@ header {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1.4rem;
+    font-size: clamp(1.4em, 0.2rem + 3vw, 2.5rem);
     padding-left: 0.2rem;;
 }
 
@@ -108,6 +111,16 @@ header {
     color: var(--very-dark-cyan);
 }
 
+.section1 .main_img {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section1 h1, .section5 h1 {
+    font-size: clamp(1.0rem, 0.1rem + 5vw, 3rem);
+}
+
 .section1 input, .section5 input, footer .button_input {
     background-color: var(--pink);
     color: white;
@@ -124,34 +137,41 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 2em 4.7em;
+    padding: 2em 0;
+    margin: 0 auto;
+    min-width: 200px;
 }
 
-.box_community {
-    padding-top: 6em; 
+.boxes {
+    margin-top: 4em;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .box_community img, .box_message img {
-    width: 13%;
-    padding-left: 0.7em;
+    width: 18%;
+    margin-right: auto;
 }
 
 .box_community h2, .box_message h2 {
-    margin: 0;
+    margin-right: auto;
     font-weight: 600;
 }
 
 .box_community h2 {
     font-size: 3.3em;
+    font-size: clamp(3.3em, 0.2rem + 10vw, 5rem);
 }
 
 .box_message h2 {
     font-size: 2.9em;
+    font-size: clamp(2.9em, 0.2rem + 8vw, 4.4rem);
+
 }
 
 .box_community h3, .box_message h3 {
     text-align: center;
-    font-size: 0.8em;
+    font-size: clamp(0.8em, 0.1rem + 2vw, 1.2rem);
     font-weight: 400;
     margin: 0;
     color: grey;
@@ -161,19 +181,33 @@ header {
 
 .section2, .section3, .section4 {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     background-color: var(--very-pale-blue);
     text-align: center;
-    padding: 4em 5em;
+    padding: 5em 2em;
+    font-size: clamp(1.1rem, 0.1rem + 3vw, 2rem);
 }
 
 .section2 img, .section3 img, .section4 img {
-    width: 85%;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section3 {
     background-color: white;
     padding-bottom: 8em;
+}
+
+.section_box {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    max-width: 700px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 /*--- Section 5 ---*/
@@ -198,6 +232,13 @@ footer {
     background-color: var(--dark-cyan);
     color: white;
     padding: 2em 2em;
+}
+
+.news_and_contact {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 3em;
 }
 
 footer h2 {
@@ -232,8 +273,10 @@ footer .button_input {
 .box_newsletter, .box_contact {
     display: flex;
     flex-direction: column;
-    margin-top: 4em;
-    margin-bottom: 2em;
+    /* margin-top: 4em; */
+    /* margin-bottom: 2em; */
+    max-width: 500px;
+    margin: auto 0;
 }
 
 .box_contact address {
@@ -258,6 +301,9 @@ footer .button_input {
     flex-direction: row;
     gap: 1em;
     filter: invert(100%);
+    /* min-width: 350px; */
+    margin-right: auto;
+    /* max-width: 500px; */
 }
 
 .box_socials img {
